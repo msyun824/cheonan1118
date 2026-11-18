@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#102b40" />
+<meta name="description" content="2026 천안시 청년정책 현황 및 발전 방향 — 인터랙티브 웹 프레젠테이션" />
+<title>천안시 청년정책 | 2026 웹 프레젠테이션</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="app" id="app">
+  <header class="topbar">
+    <a class="brand" href="#slide-1" id="brand" aria-label="첫 슬라이드로 이동"><span class="brandmark">C<span>·</span>Y</span><span class="brandwords"><b>CHEONAN YOUTH</b><small>POLICY PRESENTATION · 2026</small></span></a>
+    <nav class="desktop-nav" aria-label="슬라이드 섹션">
+      <button class="nav-tab active" data-target="0">개요</button><button class="nav-tab" data-target="2">지원체계</button><button class="nav-tab" data-target="3">주요정책</button><button class="nav-tab" data-target="7">성과·과제</button><button class="nav-tab" data-target="8">발전방향</button>
+    </nav>
+    <div class="toolbar"><button class="icon-btn" id="overviewBtn" title="전체 슬라이드 보기" aria-label="전체 슬라이드 보기"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button><button class="icon-btn" id="fullscreenBtn" title="전체화면" aria-label="전체화면"><svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></svg></button><button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  </header>
+  <div class="progress-track" aria-hidden="true"><div class="progress" id="progress"></div></div>
+  <main class="stage" id="stage" tabindex="-1" aria-label="프레젠테이션 슬라이드">
+    <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+    <div class="presentation-label"><span class="green-dot"></span><span id="sectionName">INTRO</span><span class="label-divider">/</span><span>2026 POLICY REPORT</span></div>
+    <div class="slide-shell" id="slideShell"><img id="slideImage" src="./assets/slides/slide-01.jpg" alt="천안시 청년정책 현황 및 발전 방향, 표지 슬라이드" decoding="async" fetchpriority="high" draggable="false" /></div>
+    <div class="stage-bottom"><div class="slide-caption"><strong id="slideTitle">천안시 청년정책</strong><span id="slideNumber">01 <em>/</em> 10</span></div><div class="hint">← → 방향키 · 스크롤 · 터치로 이동</div></div>
+  </main>
+  <footer class="controlbar"><div class="counter"><b id="currentCount">01</b><span class="counter-line"></span><span>10</span></div><div class="transport"><button id="prevBtn" class="round-btn" title="이전 슬라이드" aria-label="이전 슬라이드"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><button id="nextBtn" class="next-btn" title="다음 슬라이드" aria-label="다음 슬라이드">다음 슬라이드 <svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button></div><button class="transcript-trigger" id="transcriptBtn"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg> 슬라이드 내용</button></footer>
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-head"><div><small>SLIDE OVERVIEW</small><h2>전체 목차 <span>10</span></h2></div><button class="close-btn" id="closeDrawer" aria-label="목차 닫기">×</button></div><div class="thumb-grid" id="thumbGrid"></div><div class="drawer-foot">슬라이드를 선택하면 해당 화면으로 이동합니다.</div></aside>
+  <aside class="transcript" id="transcript" aria-hidden="true"><div class="drawer-head"><div><small>ACCESSIBLE CONTENT</small><h2>원본 슬라이드 내용</h2></div><button class="close-btn" id="closeTranscript" aria-label="내용 닫기">×</button></div><div class="transcript-inner"><p class="text-explainer">원본 PPT의 텍스트를 확인할 수 있습니다. 슬라이드 이미지는 원본 레이아웃과 그래픽을 그대로 보존합니다.</p><h3 id="transcriptTitle"></h3><div id="transcriptText" class="transcript-text"></div><button class="copy-btn" id="copyBtn">내용 복사</button></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="./script.js" defer></script>
+</body>
+</html>
